@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Http\Controllers;
+use App\Models\Mahasiswa;
+use Illuminate\Http\Request;
+
+class MahasiswaController extends Controller
+{
+    // Form Input
+    public function form(){
+        return view('form');
+    }
+
+    //Simpan data didalam form
+    public function simpan(Request $request){
+        Mahasiswa::create([
+            'nama' => $request->nama,
+            'nim' => $request->nim,
+            'jurusan' => $request->jurusan,
+        ]);
+        return "Data Mahasiswa Berhasil Disimpan";
+        
+    }
+
+    //Tampilkan Daftar Mahasiswa
+    public function daftar(){
+        $data = Mahasiswa::all();
+        return view('mahasiswa', ['mahasiswa' => $data]);
+    }
+}
