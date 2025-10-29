@@ -8,6 +8,6 @@ Route::get('/', function () {
 
 use App\Http\Controllers\MahasiswaController;
 
-route::get('/form', [MahasiswaController::class, 'form']);
+route::get('/form', [MahasiswaController::class, 'form'])->name('form');
 route::post('/simpan', [MahasiswaController::class, 'simpan']);
-route::get('/daftar-mahasiswa', [MahasiswaController::class, 'daftar']);
+route::get('/daftar-mahasiswa', [MahasiswaController::class, 'daftar'])->name('daftar');

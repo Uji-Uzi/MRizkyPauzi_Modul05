@@ -18,9 +18,10 @@ class MahasiswaController extends Controller
             'nim' => $request->nim,
             'jurusan' => $request->jurusan,
         ]);
-        return "Data Mahasiswa Berhasil Disimpan";
-        
-    }
+
+        return "data mahasiswa berhasil disimpan" ;
+              
+    } 
 
     //Tampilkan Daftar Mahasiswa
     public function daftar(){

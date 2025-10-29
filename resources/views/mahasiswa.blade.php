@@ -26,6 +26,8 @@
             </tr>
         @endforeach
     </table>
+    <br>
+    <a href="{{ route('form') }}">Kembali</a>
 </body>
 
 </html>
